@@ -1,0 +1,31 @@
+\newcommand{\spacer}{\vspace{1em}}
+
+\newcommand{\sectionsplit}[1]{
+    {\Large \textbf{#1}} \\ \spacer
+}
+
+\newcommand{\cvtitle}[1]{
+    {\huge #1} \\
+}
+
+\newcommand{\cventry}[5]{
+    \begin{tabular}{l p{17em}}
+            \multirow{3}{*}{\includegraphics[scale=0.45]{media/#5}} & \textbf{#1} [#2] \\
+                                                                    & {\small #3} \\
+                                                                    & #4 \\
+        \end{tabular}
+        \spacer
+}
+
+\newenvironment{cvheader}%
+{\begin{center}}%
+{\end{center}}
+
+\newenvironment{cvcontacts}%
+{\begin{minipage}[t]{0.45\textwidth}\begin{flushleft}\small}%
+{\end{flushleft}\end{minipage}\normalsize}
+
+
+\newenvironment{cvcontent}%
+{\begin{minipage}[t]{0.45\textwidth}\begin{flushleft}}%
+{\end{flushleft}\end{minipage}\hfill}

@@ -1,7 +1,34 @@
-\documentclass[11pt, a4paper]{minimal}
+\documentclass[11pt, a4paper]{article}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+
+
 \include{encoding}
 \include{format}
 
+\include{variables}
+\include{macros}
+
+\title{Curriculum Vitae}
+
 \begin{document}
-Hello world!
+
+    \begin{cvheader}
+        \cvtitle{\name}
+        \role \\
+        {\small \summary}
+    \end{cvheader}
+
+    \begin{tabular}[t]{rl}
+        \begin{cvcontacts}
+            \input{sections/contact.tex} \spacer
+            \input{sections/social.tex} \spacer
+        \end{cvcontacts}
+
+        \begin{cvcontent}
+            \input{sections/experience.tex} \spacer
+            \input{sections/education.tex} \spacer
+        \end{cvcontent}
+    \end{tabular}
 \end{document}
