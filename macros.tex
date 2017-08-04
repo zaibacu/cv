@@ -17,6 +17,13 @@
         \spacer
 }
 
+\newcommand{\cvproject}[3]{
+    \textbf{#1} \\
+    {\scriptsize \url{#2}} \\
+    #3 \\
+    \spacer
+}
+
 \newenvironment{cvheader}%
 {\begin{center}}%
 {\end{center}}
@@ -27,5 +34,5 @@
 
 
 \newenvironment{cvcontent}%
-{\begin{minipage}[t]{0.45\textwidth}\begin{flushleft}}%
+{\begin{minipage}[t]{0.65\textwidth}\begin{flushleft}}%
 {\end{flushleft}\end{minipage}\hfill}

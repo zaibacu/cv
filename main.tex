@@ -2,6 +2,8 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{multirow}
+\usepackage{pifont}
+\usepackage{longtable}
 
 
 \include{encoding}
@@ -13,22 +15,33 @@
 \title{Curriculum Vitae}
 
 \begin{document}
-
     \begin{cvheader}
-        \cvtitle{\name}
-        \role \\
-        {\small \summary}
+        \begin{tabular}{ll}
+            \multirow{3}{*}{\includegraphics[scale=0.15]{media/profile.png}} \\
+            & \cvtitle{\name} \\
+            & \role \\
+            & {\small \summary}
+        \end{tabular}
     \end{cvheader}
-
-    \begin{tabular}[t]{rl}
-        \begin{cvcontacts}
+    \begin{longtable}[t]{r|l}
+        \multirow{3}{*}{\begin{cvcontacts}
             \input{sections/contact.tex} \spacer
             \input{sections/social.tex} \spacer
-        \end{cvcontacts}
+            \input{sections/skills.tex} \spacer
+        \end{cvcontacts}} &
 
         \begin{cvcontent}
             \input{sections/experience.tex} \spacer
+        \end{cvcontent} \\
+
+        & \begin{cvcontent}
             \input{sections/education.tex} \spacer
-        \end{cvcontent}
-    \end{tabular}
+          \end{cvcontent} \\
+
+        & \begin{cvcontent}
+            \input{sections/projects.tex} \spacer
+        \end{cvcontent} \\
+
+
+    \end{longtable}
 \end{document}
