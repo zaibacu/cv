@@ -1,4 +1,6 @@
-language: latex
+before_install:
+- sudo apt-get update 
+- sudo apt-get install texlive-latex-extra
 script: make
 deploy:
   provider: releases
@@ -7,3 +9,5 @@ deploy:
   file: "main.pdf"
   on:
     repo: zaibacu/cv
+    tags: true
+    branch: master
