@@ -20,3 +20,18 @@ Actual generation
 Latest Version
 ===============
 It is expected to be found in [Releases](https://github.com/zaibacu/cv/releases) section
+
+Using as a template for your own CV
+===================================
+Yes you can. I'm putting it inside Github.com mostly due to own comfort.
+However most parts are done having flexibility in mind.
+- `variaables.tex` - here you setup basic facts about you
+- `sections/expierence.tex` - work expierence blocks goes here
+- `sections/education.tex` - education blocks goes here
+- `sections/volunteering.tex` - volunteering stuff goes here
+- `sections/projects.tex` - short info about projects goes here
+- `sections/skills.tex` - simple skill table
+- `sections/languages.tex` - simple language table
+
+Most of the sections can be removed via `main.tex`.
+Pictures goes into `media/` folder
