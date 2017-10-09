@@ -11,5 +11,4 @@ deploy:
   file: "main.pdf"
   on:
     repo: zaibacu/cv
-    tags: true
     branch: master
