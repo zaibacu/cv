@@ -3,7 +3,7 @@ script: make
 deploy:
   provider: releases
   api_key:
-    secure: $secure_key
+    secure: WQ/MbfrLCuHr+pe/RBwngg9QS++R8ykKTfmTeutDOJJ9OP/j47dNc4XFAGgDllhtalzZoMZYJ+D3DhS3//o65LOW7/+Aiz0umbV381UDwzbyvWWPWM5xAYz97KZN7oAqLPG3auPZY+fqGlRddfwaG0yLpLwNSQMlkC9dk40DUKRizAvTwTsTgpH1Rhqj/dmxMMA39iCjH6/1YKdggWL3YNK7OS4tmnU1ZU99QnuuFPK/E3jFnR6eiMcrZKGGnxHtqw1sgxbhelSRekhOuym4hAK9G8pu4ClB70YNL7BfCfKD69TeEW4NoM+1nH397f2uOSxWTNfiAuQW35i7/8zHIlhbMRmgq+64aEgz3LAqea+2FFdaTmgMOMgWKoCQQKfR73xunzrdqM0TmfEPlKbvskMQcounHG76zDe3Uia9g5I02wssaKtxscWWg28AkgquFQKxR3T2kiM/29EvNRB6YY6N2kGi/Aff4nPTXl4dolvnSjTZf+BNDFQDlzhLynA+Mkg3gemliEw5o+ul24hGwzQdWg3RJ24thnS7istTrgtreDaabPhORrZNh/q34IRJ5CLlNydba8nnygtap69FYM0FgUY589FTe6SdZN/fQstmc5gSqZsmfjykabknYh6ATlXfO9mjImeKnUeNJE+/Cy40nw5K3DF2qdJIP1mkC7Y=
   file: "main.pdf"
   on:
     repo: zaibacu/cv
