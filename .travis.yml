@@ -1,0 +1,9 @@
+language: latex
+script: make
+deploy:
+  provider: releases
+  api_key:
+    secure: $secure_key
+  file: "main.pdf"
+  on:
+    repo: zaibacu/cv
