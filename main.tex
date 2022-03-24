@@ -6,6 +6,7 @@
 \usepackage{longtable}
 \usepackage{seqsplit}
 \usepackage{fancyhdr}
+\usepackage{array}
 
 
 \include{encoding}
@@ -19,22 +20,16 @@
 
 \begin{document}
     \begin{cvheader}
-        \begin{tabular}{ll}
+        \begin{tabular}{LL}
             \multirow{3}{*}{\includegraphics[scale=0.13]{media/profile.png}} \\
             & \cvtitle{\name} \\
-            & \role \\
-            & {\small \seqsplit{\summary}}
-	    \spacer
-	    \spacer
-	    \noindent \textbf{Location:   }\location  \\
-	    \noindent \textbf{Email:      }\email   \\
-	    \noindent \textbf{Mobile:     }\mobile \\
-            \noindent \textbf{Website:    }\homepage \\
-
+            & \role \thinspace @ \current_company \\
+	    & \summary \\
         \end{tabular}
     \end{cvheader}
     \begin{longtable}[t]{r|l}
         \multirow{3}{*}{\begin{cvcontacts}
+            \input{sections/contact.tex} \spacer
             \input{sections/social.tex} \spacer
             \input{sections/skills.tex} \spacer
             \input{sections/languages.tex} \spacer
