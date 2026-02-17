@@ -1,8 +1,4 @@
-COMPILER=pdflatex
-
 __PHONY__: build
 
 build:
-	$(COMPILER) main.tex
-
-clean:
+	uv run python render_cv.py
