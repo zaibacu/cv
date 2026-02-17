@@ -1,0 +1,29 @@
+name: Render CV
+
+on:
+  push:
+    paths:
+      - 'cv.md'
+      - 'render_cv.py'
+      - 'pyproject.toml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v4
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libpango1.0-dev libharfbuzz-dev libffi-dev fonts-liberation
+
+      - name: Render CV
+        run: uv run python render_cv.py
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cv
+          path: cv.pdf
